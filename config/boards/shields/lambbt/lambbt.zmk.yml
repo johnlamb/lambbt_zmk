@@ -1,0 +1,11 @@
+file_format: "1"
+id: lambbt
+name: LambBT
+type: shield
+url: https://github.com/johnlamb/lambbt
+requires: [pro_micro]
+features:
+  - keys
+siblings:
+  - lambbt_left
+  - lambbt_right
