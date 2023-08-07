@@ -1,13 +1,7 @@
-config ZMK_BLE
-	default y
-
 if SHIELD_LAMBBT_LEFT 
 
 config ZMK_KEYBOARD_NAME
-	default "LambBT"
-
-config ZMK_SPLIT_BLE_ROLE_CENTRAL
-	default y
+    default "LambBT"
 
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
@@ -17,6 +11,6 @@ endif
 if SHIELD_LAMBBT_LEFT || SHIELD_LAMBBT_RIGHT
 
 config ZMK_SPLIT
-	default y
+    default y
 
 endif
