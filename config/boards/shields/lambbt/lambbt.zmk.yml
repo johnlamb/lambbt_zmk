@@ -4,7 +4,6 @@ name: LambBT
 type: shield
 url: https://github.com/johnlamb/lambbt
 requires: [pro_micro]
-exposes: [i2c_oled]
 features:
   - keys
 siblings:

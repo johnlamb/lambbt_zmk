@@ -1,6 +1,6 @@
 config SHIELD_LAMBBT_LEFT
-	def_bool $(shields_list_contains, lambbt_left)
+	def_bool $(shields_list_contains,lambbt_left)
 
 config SHIELD_LAMBBT_RIGHT
-	def_bool $(shields_list_contains, lambbt_right)
+	def_bool $(shields_list_contains,lambbt_right)
 
