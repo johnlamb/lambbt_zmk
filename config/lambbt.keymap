@@ -71,7 +71,7 @@
             &trans     &kp AT    &kp DLLR     &kp LBRC   &kp RBRC      &kp EXCL  &kp AMPS   &kp STAR   &kp TILDE   &kp SQT
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │   ^      │    %     │    (     │  )       │   │ LEFT     │ DOWN     │   UP     │  RIGHT   │    "     │
-            &trans    &kp CARET  &kp PRCNT  &kp LPAR  &kp RPAR       &kp LEFT    &kp DOWN    &kp UP    &kp RIGHT   &kp DSQT
+            &trans    &kp CARET  &kp PRCNT  &kp LPAR  &kp RPAR       &kp LEFT    &kp DOWN    &kp UP    &kp RIGHT   &kp DQT
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│    ~     │   #      │   @      │    [     │   ]      │   │   =      │   -      │  <       │ >        │    \     │
             &kp TILDE  &kp HASH   &kp AT     &kp LBKT  &kp RBKT       &kp EQUAL  &kp MINUS   &kp LT     &kp GT     &kp BSLH
