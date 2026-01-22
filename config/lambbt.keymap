@@ -8,6 +8,7 @@
 
 #define NUM 1
 #define SYM 2
+#define SYS 3
 
 
 / {
@@ -25,6 +26,14 @@
             require-prior-idle-ms = <100>;
             bindings = <&kp>, <&kp>;
         };
+    };
+
+    conditional_layers {
+      compatible = "zmk,conditional_layers";
+      tri_layer {
+        if-layers = <1 2>;
+        then-layer = <3>;
+      };
     };
 
     keymap {
@@ -51,13 +60,13 @@
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│          │          │          │          │          │   │          │          │          │          │          │
-            &sys_reset &trans     &trans     &trans    &bt BT_SEL 0   &trans     &kp N7     &kp N8     &kp N9      &trans
+            &kp N1     &kp N2     &kp N3     &kp N4     &kp N5          &kp N6     &kp N7     &kp N8     &kp N9      &trans
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │          │          │          │          │          │
-          &bootloader  &trans     &trans     &trans    &bt BT_SEL 1   &trans     &kp N4     &kp N5     &kp N6      &kp COMMA
+            &kp ESC    &trans     &trans     &trans     &trans          &trans     &kp N4     &kp N5     &kp N6      &kp COMMA
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │          │          │          │          │          │
-            &trans     &trans     &trans    &bt BT_CLR &bt BT_SEL 2   &kp N0     &kp N1     &kp N2     &kp N3      &kp DOT
+            &trans     &trans     &trans    &trans      &trans          &kp N0     &kp N1     &kp N2     &kp N3      &kp DOT
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &trans     &trans         &trans     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
@@ -77,6 +86,23 @@
             &kp TILDE  &kp HASH   &kp AT     &kp LBKT  &kp RBKT       &kp EQUAL  &kp MINUS   &kp LT     &kp GT     &kp BSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                                  &trans     &trans         &trans     &trans
+        //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
+            >;
+        };
+
+        sys_layer {
+            bindings = <
+        //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
+        //│          │          │          │          │          │   │          │          │          │          │          │
+            &sys_reset &trans     &trans     &trans    &bt BT_SEL 0   &trans     &trans     &trans     &trans      &trans
+        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
+        //│          │          │          │          │          │   │          │          │          │          │          │
+          &bootloader  &trans     &trans     &trans    &bt BT_SEL 1   &trans     &trans     &trans     &trans      &trans
+        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
+        //│          │          │          │          │          │   │          │          │          │          │          │
+            &trans     &trans     &trans    &bt BT_CLR &bt BT_SEL 2   &trans     &trans     &trans     &trans      &trans
+        //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
+                                             &trans     &trans         &trans     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
